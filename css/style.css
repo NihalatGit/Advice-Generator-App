@@ -1,0 +1,169 @@
+/* General Reset */
+
+
+/* Box sizing rules */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+/* Remove default margin */
+body,
+h1,
+h2,
+h3,
+h4,
+p,
+figure,
+blockquote,
+dl,
+dd {
+  margin: 0;
+}
+
+/* Remove list styles on ul, ol elements with a list role, which suggests default styling will be removed */
+ul[role='list'],
+ol[role='list'] {
+  list-style: none;
+}
+
+/* Set core root defaults */
+html:focus-within {
+  scroll-behavior: smooth;
+}
+
+/* Set core body defaults */
+body {
+  min-height: 100vh;
+  text-rendering: optimizeSpeed;
+  line-height: 1.5;
+}
+
+/* A elements that don't have a class get default styles */
+a:not([class]) {
+  text-decoration-skip-ink: auto;
+}
+
+/* Make images easier to work with */
+img,
+picture {
+  max-width: 100%;
+  display: block;
+}
+
+/* Inherit fonts for inputs and buttons */
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+
+/* Remove all animations, transitions and smooth scroll for people that prefer not to see them */
+@media (prefers-reduced-motion: reduce) {
+  html:focus-within {
+   scroll-behavior: auto;
+  }
+  
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+/* Variables */
+:root {
+    --bg-color: hsl(218, 23%, 16%);
+    --ct-color: hsl(217, 19%, 24%);
+    --ft-color: #fff ;
+    --snd-color:hsl(150, 100%, 66%);
+    --trd-color:hsl(193, 38%, 86%);
+    --sh-color:hsla(150, 100%, 66%, 0.256);
+    
+  }
+  
+  
+
+/* font import */
+@import url('https://fonts.googleapis.com/css2?family=Manrope:wght@500;800&display=swap');
+
+/* ---------------------------------- */
+
+body{
+    background-color: var(--bg-color) ;
+    font-family: 'Manrope', sans-serif;
+}
+
+
+
+.wrapper{
+    min-width: 400px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+   
+}
+
+.container{
+    color: var(--ft-color);
+    border-radius: 10px;
+    background-color: var(--ct-color);
+    box-shadow: 0 1px 50px rgba(43, 28, 28, 0.3) ;
+    text-align: center;
+
+}
+
+.container .header{
+    display: flex;
+    text-align: center;
+    justify-content: center;
+    padding-top: 50px ;
+    letter-spacing: 5px;
+    color: var(--snd-color);
+    font-size: 12px;
+    font-weight: 600;
+
+}
+
+.container .quote-area{
+    line-height: 2;
+    color: var(--trd-color);
+    font-weight: 600;
+    font-size: 28px;
+    padding: 25px;
+    
+}
+
+.divider{
+    display: flex;
+    text-align: center;
+    justify-content: center;
+}
+
+.wrapper .dice{
+    background-color: var(--snd-color);
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    justify-content: center;
+    text-align: center;
+    align-items: center;
+    display: flex;
+    top: 50%;
+    left: 50%;
+    position: relative;
+    transform: translate(-50% , 50%);
+    transition: all 0.3s ease;
+    cursor: pointer;
+
+}
+
+.wrapper .dice:hover{
+    box-shadow: 0 0 10px 10px var(--sh-color);
+}
